@@ -138,7 +138,7 @@ class UserController extends Controller
 
         if (!$user->isEmpty()) {
             User::where('email', $request->email)->delete();
-            
+
             return ResponseFormatter::success(null, 'User berhasil dihapus');
         } else {
             return ResponseFormatter::error(null, 'User gagal dihapus', 404);
